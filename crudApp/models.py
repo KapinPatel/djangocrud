@@ -14,7 +14,7 @@ class Company(models.Model):
 class Employee(models.Model):
     name=models.CharField(max_length=30)
     email=models.EmailField()
-    phone=models.IntegerField(null=True,blank=True)
+    phone=models.CharField(max_length=14)
     address=models.CharField(max_length=200)
     company=models.ForeignKey(Company,on_delete=models.CASCADE)
     def __str__(self):
